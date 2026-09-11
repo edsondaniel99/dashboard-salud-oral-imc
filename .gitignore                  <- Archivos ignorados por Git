@@ -1,0 +1,94 @@
+# ==============================================================================
+# .gitignore - PROYECTO: Dashboard Salud Oral e IMC
+# ==============================================================================
+
+# ------------------------------------------------------------------------------
+# 1. ENTORNOS VIRTUALES (Virtual Environments)
+# ------------------------------------------------------------------------------
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# ------------------------------------------------------------------------------
+# 2. CACHÉ Y ARCHIVOS COMPILADOS DE PYTHON
+# ------------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# ------------------------------------------------------------------------------
+# 3. JUPYTER NOTEBOOKS & ENTORNOS DE DESARROLLO (IDEs)
+# ------------------------------------------------------------------------------
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ------------------------------------------------------------------------------
+# 4. DATOS SENSIBLES / PESADOS (Data Governance)
+# ------------------------------------------------------------------------------
+# Ignorar datos crudos pesados o con PII (Información Personal Identificable)
+data/raw/*
+!data/raw/.gitkeep
+
+# Excluir archivos masivos de datos si superan los límites de Git
+*.csv
+*.xlsx
+*.parquet
+*.sqlite
+*.db
+
+# NOTA: Si deseas incluir un dataset sintético/público pequeño para la demo,
+# puedes desbloquearlo explícitamente así:
+# !data/processed/df_final.csv
+
+# ------------------------------------------------------------------------------
+# 5. SEGURIDAD Y VARIABLES DE ENTORNO
+# ------------------------------------------------------------------------------
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ------------------------------------------------------------------------------
+# 6. ARCHIVOS DEL SISTEMA OPERATIVO
+# ------------------------------------------------------------------------------
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# ------------------------------------------------------------------------------
+# 7. LOGS Y COBERTURA DE PRUEBAS
+# ------------------------------------------------------------------------------
+*.log
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
